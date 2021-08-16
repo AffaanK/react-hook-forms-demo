@@ -2,7 +2,7 @@ import React,{useState,useRef} from 'react'
 import { useForm } from "react-hook-form";
 import {Redirect} from 'react-router-dom';
 
-export default function RegistrationForm({addUser}) {
+export default function RegistrationForm({history,addUser}) {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const [formState,setFormState] = useState();
   const password = useRef({});
@@ -10,7 +10,7 @@ export default function RegistrationForm({addUser}) {
   const onSubmit = (data) => {
     addUser(data)
     console.log(data);
-     <Redirect to='/dashboard'/>
+    history.push('/dashboard')
   }
 
  
@@ -26,32 +26,41 @@ export default function RegistrationForm({addUser}) {
               <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                 <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
                 <form className="mx-1 mx-md-4" onSubmit={handleSubmit(onSubmit)} noValidate>
+
                   
-                <div class="form-group">
-                      <label className="form-label" htmlFor="name">Your Name</label>
-                      <input type="text" {...register('name',{required:'user name required', pattern: {
-                        value:/^[a-zA-Z\s]*$/i,
-                        message:'Only alaphebets and spaces allowed'
-                        } })} id="name" className="form-control" />
-                      {errors.name && errors.name.message}
-                    </div>
-                  
-                  <div className="d-flex flex-row mb-4">
-                    <i className="fas fa-envelope fa-lg me-3 fa-fw" />
-                    <div className="form-outline flex-fill mb-0">
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" {...register('name', {
+                            required: 'user name required', pattern: {
+                              value: /^[a-zA-Z\s]*$/i,
+                              message: 'Only alaphebets and spaces allowed'
+                            }
+                          })} id="name" className="form-control" />
+                          {errors.name && errors.name.message}
+                          <label class="form-label" for="user_name">Your Name</label>
+                        </div>
+                      </div>
+
+
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i className="fas fa-envelope fa-lg me-3 fa-fw" />
+                        <div class="form-outline flex-fill mb-0">
+
                           <input type="email" {...register('email', {
                             required: true,
                             pattern: {
                               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                               message: "invalid email address"
                             }
-                            })} id="email" className="form-control" />
-                      <label className="form-label" htmlFor="email">Your Email</label>
-                      {errors.email &&  errors.email.message}
-                    </div>
-                  </div>
-                  <div className="d-flex flex-row align-items-center mb-4">
-                    <i className="fas fa-phone fa-lg me-3 fa-fw" />
+                          })} id="email" className="form-control" />
+                          <label className="form-label" htmlFor="email">Your Email</label>
+                          {errors.email && errors.email.message}
+                        </div>
+                      </div>
+                  
+                      
+                          
                     <div className="form-outline flex-fill mb-0">
                           <input type="number" {...register('contact_number', {
                             required: 'contact is required.', maxLength: { value: 10, message: "should NOT be more than 10 digit" },
@@ -59,8 +68,8 @@ export default function RegistrationForm({addUser}) {
                           })} id="contact_number" className="form-control" />
                       <label className="form-label" htmlFor="contact_number">Contact Number</label>
                       {errors.contact_number && errors.contact_number.message }
-                    </div>
-                  </div>
+                        </div>
+                      
 
                       <div className="card">
                         <div className="card-body">

@@ -44,9 +44,9 @@ function App() {
     <div className="App">
       
       <div>
-         <Route path="/login" component={ Login } />
+         <Route path="/login" render={ props=><Login {...props}/> } />
          <Route path="/user-profile" component={ UserProfile } />
-         <Route path="/signup" render={props=><RegistrationForm addUser={addUser}/>} />
+         <Route path="/signup" render={props=><RegistrationForm {...props} addUser={addUser}/>} />
          <Route path="/dashboard" render={props=><Dashboard usersData={usersData}/>}/>
       </div>
       
