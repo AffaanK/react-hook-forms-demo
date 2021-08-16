@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/react-hook-forms-demo/static/css/main.113e17e1.chunk.css",
-    "main.js": "/react-hook-forms-demo/static/js/main.398d7523.chunk.js",
-    "main.js.map": "/react-hook-forms-demo/static/js/main.398d7523.chunk.js.map",
+    "main.js": "/react-hook-forms-demo/static/js/main.00201a3c.chunk.js",
+    "main.js.map": "/react-hook-forms-demo/static/js/main.00201a3c.chunk.js.map",
     "runtime-main.js": "/react-hook-forms-demo/static/js/runtime-main.41bc330d.js",
     "runtime-main.js.map": "/react-hook-forms-demo/static/js/runtime-main.41bc330d.js.map",
-    "static/js/2.0303864b.chunk.js": "/react-hook-forms-demo/static/js/2.0303864b.chunk.js",
-    "static/js/2.0303864b.chunk.js.map": "/react-hook-forms-demo/static/js/2.0303864b.chunk.js.map",
+    "static/js/2.3836f7d1.chunk.js": "/react-hook-forms-demo/static/js/2.3836f7d1.chunk.js",
+    "static/js/2.3836f7d1.chunk.js.map": "/react-hook-forms-demo/static/js/2.3836f7d1.chunk.js.map",
     "static/js/3.9bfa12d1.chunk.js": "/react-hook-forms-demo/static/js/3.9bfa12d1.chunk.js",
     "static/js/3.9bfa12d1.chunk.js.map": "/react-hook-forms-demo/static/js/3.9bfa12d1.chunk.js.map",
     "index.html": "/react-hook-forms-demo/index.html",
     "static/css/main.113e17e1.chunk.css.map": "/react-hook-forms-demo/static/css/main.113e17e1.chunk.css.map",
-    "static/js/2.0303864b.chunk.js.LICENSE.txt": "/react-hook-forms-demo/static/js/2.0303864b.chunk.js.LICENSE.txt"
+    "static/js/2.3836f7d1.chunk.js.LICENSE.txt": "/react-hook-forms-demo/static/js/2.3836f7d1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.41bc330d.js",
-    "static/js/2.0303864b.chunk.js",
+    "static/js/2.3836f7d1.chunk.js",
     "static/css/main.113e17e1.chunk.css",
-    "static/js/main.398d7523.chunk.js"
+    "static/js/main.00201a3c.chunk.js"
   ]
 }
